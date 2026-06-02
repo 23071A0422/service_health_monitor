@@ -1,0 +1,25 @@
+# =========================================================
+# Service Health Monitor Configuration
+# =========================================================
+
+# Global Alerting Thresholds
+# Used by the Alert Manager to trigger warnings and critical alerts.
+thresholds:
+  availability_min_pct: 90.0
+  latency_max_ms: 500
+
+# Target Services to Monitor
+services:
+  - name: reliable-dns-api
+    url: https://1.1.1.1
+    
+  - name: delayed-service-mock
+    # This mock endpoint will artificially delay the response by 800ms.
+    # It will trigger our Latency Threshold (>500ms).
+    url: https://httpstat.us/200?sleep=800
+    
+  - name: failing-payment-gateway
+    # This mock endpoint will always return an HTTP 503 Service Unavailable.
+    # It will trigger our Exponential Backoff, classify as Persistent Failure, 
+    # and eventually trigger our Availability Threshold.
+    url: https://httpstat.us/503

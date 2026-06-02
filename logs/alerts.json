@@ -1,0 +1,4 @@
+{"timestamp": "2026-06-02T21:32:19.601685+00:00", "service": "delayed-service-mock", "alert_type": "AVAILABILITY_DEGRADED", "message": "Availability dropped to 0.0% over last 1 checks. (Threshold: 90.0%)", "severity": "CRITICAL"}
+{"timestamp": "2026-06-02T21:32:25.541439+00:00", "service": "failing-payment-gateway", "alert_type": "AVAILABILITY_DEGRADED", "message": "Availability dropped to 0.0% over last 1 checks. (Threshold: 90.0%)", "severity": "CRITICAL"}
+{"timestamp": "2026-06-02T21:32:41.574159+00:00", "service": "delayed-service-mock", "alert_type": "AVAILABILITY_DEGRADED", "message": "Availability dropped to 0.0% over last 2 checks. (Threshold: 90.0%)", "severity": "CRITICAL"}
+{"timestamp": "2026-06-02T21:32:47.504413+00:00", "service": "failing-payment-gateway", "alert_type": "AVAILABILITY_DEGRADED", "message": "Availability dropped to 0.0% over last 2 checks. (Threshold: 90.0%)", "severity": "CRITICAL"}
